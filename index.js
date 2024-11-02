@@ -1,7 +1,7 @@
+// add the drop-down button
 let btn = document.querySelector('.toggle-btn');
 let btnIcon = document.querySelector('.toggle-btn i');
 let dropDownBar = document.querySelector('.dropdown-nav');
-
 btn.addEventListener('click', () => {
   dropDownBar.classList.toggle('open');
   let isOpen = dropDownBar.classList.contains('open');
@@ -12,13 +12,10 @@ btn.addEventListener('click', () => {
 
 const boxes = document.querySelectorAll(".container-items");
 
-boxes.forEach((box, index) => {
-  box.addEventListener("click", () => togglepara(index));
-});
-
+// about section boxes
+boxes.forEach((box, index) => { box.addEventListener("click", () => togglepara(index));});
 function togglepara(index) {
   const contents = document.querySelectorAll('.tab-content');
-
   contents.forEach((currContent, i) => {
     if (i === index) {
       currContent.classList.toggle('show')
