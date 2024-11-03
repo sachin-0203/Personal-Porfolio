@@ -13,7 +13,12 @@ btn.addEventListener('click', () => {
 const boxes = document.querySelectorAll(".container-items");
 
 // about section boxes
-boxes.forEach((box, index) => { box.addEventListener("click", () => togglepara(index));});
+boxes.forEach((box, index) => {
+  box.addEventListener("click", () => {
+    togglepara(index);
+    toggleTitle(index);
+  });
+});
 function togglepara(index) {
   const contents = document.querySelectorAll('.tab-content');
   contents.forEach((currContent, i) => {
@@ -22,6 +27,18 @@ function togglepara(index) {
     }
     else {
       currContent.classList.remove('show');
+    }
+  });
+}
+
+function toggleTitle(index){
+  const titles= document.querySelectorAll('.each-tabs');
+  titles.forEach((title,i) =>{
+    if(i==index){
+      title.classList.toggle('hide');
+    }
+    else{
+      title.classList.remove('hide');
     }
   });
 }
@@ -45,5 +62,5 @@ themeBtn.addEventListener("click", () => {
   body.classList.toggle("dark-theme", isLightTheme);
   sunIcon.classList.toggle("mode", !isLightTheme);
   moonIcon.classList.toggle("mode", isLightTheme);
-  localStorage.setItem("theme", isLightTheme? "dark": "light");
+  localStorage.setItem("theme", isLightTheme ? "dark" : "light");
 });

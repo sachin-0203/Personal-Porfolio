@@ -37,8 +37,8 @@ body {
 }
 
 .inner-text {
-  font-size: 0.8rem;
-  font-weight: 200;
+  font-size: 0.7rem;
+  font-weight: 400;
 }
 
 /*----------Navbar------- */
@@ -200,6 +200,7 @@ hr{
   text-align: center;
   color:#141414;
 }
+
 .dropdown-nav{
   width: 100%;
   display: flex;
@@ -283,6 +284,10 @@ hr{
 /*---------About-section--------*/
 #about{
   padding: 40px 0px;
+}
+.about-text{
+  font-size: 1rem;
+  font-weight: 400;
 }
 .banner{
   margin:  0 auto;
@@ -384,8 +389,11 @@ hr{
   transition: max-height 0.5s ease-out;
   opacity: 0;
   transition: opacity 0.5s ease-out;
+  text-align: justify;
 }
-
+.hide{
+  display: none;
+}
 .show {
   max-height: 200px;
   opacity: 1;
@@ -421,13 +429,17 @@ hr{
   text-transform: capitalize;
   text-align: center;
   width: 250px;
-  padding: 45px 25px;
+  padding: 12px 25px;
   height: 300px;
 }
 .service-row2-col:hover{
   box-sizing: border-box;
   box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
   transition: all 0.5s ease 0s;
+}
+.service-row2-col img{
+  height: 70px;
+  width:  70px;
 }
 .row3-title {
   text-align: start;
@@ -529,19 +541,18 @@ hr{
   width: fit-content;
   margin: 50px auto;
   font-size: 15px;
-
   padding: 14px 50px;
   text-decoration: none;
   text-transform: capitalize;
   color: white;
-  background-color: rgb(115, 0, 255);
+  background-color: #4c38bbce;
   border: 1px solid violet;
   border-radius: 10px;
   box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
   transition: background-color 0.5s;
 }
 .about-btn:hover{
-  background-color: #4c38bbce;
+  background-color: rgb(115, 0, 255);
 }
 
 /* --------projects--------- */
@@ -775,7 +786,8 @@ footer{
   }
   .inner-text {
     font-size: 0.4rem;
-    font-weight: 100;
+    font-weight: 200;
+    margin-top: 3px;
   }
   
 }
